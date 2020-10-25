@@ -1,0 +1,22 @@
+C in Unix 
+Midterm Study Guide
+
+Data Types
+
+char - used to represent individual characters. Because calues of type char are defined to require one byte of storage, characters are the fundamental unit for expressing the size of data values.
+
+short - modified version of int to decrease the amount of space alloted for integers
+
+int - corresponds to a signed integer. 16 bit allocation (-32768, +32767)
+
+long - another modified version of int to extend the amount of memory for the integer
+
+float - the least precise floating point type, although requires less memory than double
+
+double - more precise floating point type. most commonly used
+
+long double - extremely precise also require more memory than both float & double. Rarely used.
+
+Arithmetic operators:
+
++, *, /, 
