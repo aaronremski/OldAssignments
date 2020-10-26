@@ -1,0 +1,12 @@
+words
+simple
+hard
+maximum
+minimum
+tango
+chili
+fat
+killer
+manderine
+chocolate
+vanilla
