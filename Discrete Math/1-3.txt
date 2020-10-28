@@ -1,0 +1,55 @@
+Aaron Remski
+COT 3100
+
+
+1.3
+
+2.a. True
+  b. False
+  c. False
+  d. True
+
+6.a. There exists a student in my class who has taken a C.S. class at                     	UWF.
+  b. There exists a student in my class who has taken all the C.S.                                                           	classes at UWF.
+  c. For all students in my class, there is a student that has taken a 	C.S. class at UWF.
+  d. There exists a C.S. class taken at UWF for all the students in my 	class.
+  e. For all C.S. classes at UWF there exists a student in my class 	that is taking one. 
+  f. All the students in my class are taking all of the C.S. courses at 	UWF.
+
+12. Let \/ = "For all";  E = "There exists"; - = negation; & = and, 
+     != is not equal; 
+
+    a. \/x F(x, Fred)
+    b. Ey \/x(Evelyn,x)
+    c. \/x Ey(x,y)
+    d. \/x Ey -F(x,y)
+    e. \/y Ex(y,x)
+    f. \/v Ey \/z(F(x,y) & F(x,z))
+    g. Ex Ey(x != y & F(Nancy, x) & F(Nancy, y) & \/z(F(Nancy, z) 
+       --> (z = x or z = y)))
+    h. Ex (\/yF(x,y) & \/z((\/wF(w,z)) --> z = x))
+    i. \/x-(x,x)
+    j. Ex \/y(F(x,y) <--> x = y))
+
+22. a. Yes
+    b. NO
+    c. YES
+    d. YES
+    e. YES
+    f. NO
+    g. YES
+    h. YES
+    i. YES
+    j. NO
+    k. YES
+    l. YES
+
+24. same notation as 12.
+
+    a. \/y \/x-P(x,y)
+    b. Ex \/y-P(x,y)
+    c. \/y(Q(y) or Ex R(x,y))
+    d. \/y(\/x-R(x,y) & Ex-S(x,y))
+    e. \/y(Ex z\/-T(x,y,z) & \/x Ez-U(x,y,z)
+     
+

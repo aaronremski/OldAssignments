@@ -1,0 +1,135 @@
+COT3100 Homework 1 Solutions
+
+1.4.2 
+
+a. {x | x in N, -1<x<13, 3 divides x}
+
+b. {x| x in N –4<x<4}
+
+c. {x| x is a Roman letter, l<x<q}
+
+
+
+1.4.4
+
+B subset of A, C subset of A, C subset of D
+
+
+
+1.4.14
+
+Yes.  Why?
+
+Fact: Since A is a subset of A, there is a subset of A containing z if and only if z is in A 
+
+(draw a picture and/or think about it).
+
+This means that the one-place union of the powerset of A is A. :
+
+U(P(A))= (by def. of union)
+
+{z | there is a x in P(A) and z in x}=(by def. of power set)
+
+{z | there is a subset x of A and z in x}=(by Fact)
+
+{z | z in A} = (obviously) A.
+
+Also applying this argument to B gives U(P(B))=B.
+
+So , If P(A) is P(B), then 
+
+A=U(P(A))=U(P(B))=B, so A=B.  
+
+
+
+1.5.4
+
+A is a subset of B, so 
+
+a. A union B is B
+
+b. A intersect B is A
+
+c. A-B is empty
+
+d. B-A={f,g,h}
+
+
+1.5.16
+
+Why is (A - B) - C = (A - B) - (C - B)?  This is really a kind of if and 
+only if statement: for any element x, 
+x  is in (A - B) - C if and only if x is in (A - B) - (C - B). 
+To check this, we have look at some element x and go both ways along 
+the if-and-only-if double-arrow.
+We examine all the possibilities. (You could draw a table....)
+( ==> )
+ First direction.
+ So, suppose we start off with x in (A - B) - C.  This means x is in A, and 
+ x is not in B, and, furthermore, x is not in C either.  
+ We want to find out that x is in x is in (A - B) - (C - B).
+ (Remember, this means x would be in A - B and not in C - B.)
+ Since x is not in C, x is certainly not in C - B.  
+ Also, x is in A, and x is not in B, so x is in A - B.  But all this means 
+ x is in (A - B) - (C - B). 
+( <== )
+ Second direction.
+ Now we start off with x in (A - B) - (C - B).  This means x 
+ is in A - B and not in C - B.  Breaking A - B down further, this means 
+ x is in A and  x is not in B.  Now we have to look at x not being in C - B.
+ Not being in C - B means that either 
+ x was never in C in the first place, or, if it was, it must have 
+ been in B so that it would get taken out of C - B. But we know the second 
+ possibility 
+ cannot happen:  x is not 
+ in B because x is in A - B.  So x is not in C.  So x is in A- - B, but 
+ x is not in C, so x is in (A - B) - C. 
+ 
+
+1.6.2
+
+a. No -- this is not well-defined --- for example, we do not know whether f(2) is supposed 
+
+to be 2 or -2.
+
+b. Not clear: Yes, if we mean the positive square root, but no, if we mean anything that 
+
+could be a square root, since then it is just like (a) above.
+
+c. No, this is undefined for -2 and +2.
+
+
+
+1.6.10
+
+We have to check whether f(n)=f(m) always makes it so that n=m.
+
+a. Yes: n-1=m-1 means n=m.
+
+b. No: ((-2)-squared +1 is the same as 2-squared +1, but -2 is not 2.
+
+c. Yes, n-cubed = m-cubed always means n=m.
+
+d. No, ceiling of 3/2 is the same as ceiling of 4/2, but 3 is not 4.
+
+
+
+1.6.16
+
+f[S] = {f(x) | x in S}
+
+a. {1}, since f(x) is always 1.
+
+b. {-1,1,5,9,15}
+
+c. {0,1,2}
+
+d. {0,1,5,16}
+
+
+
+
+
+
+
+

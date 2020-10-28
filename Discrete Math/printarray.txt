@@ -1,0 +1,9 @@
+ for (row = 0; row < (linecount - 1); row++)
+    {
+    for (column = 0; column < vars; column++)
+      {
+	 printf("%d ", tablearray [row][column]);
+      }
+      column = 0;
+      printf("\n");
+    }

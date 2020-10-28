@@ -1,0 +1,41 @@
+COT 3100 Homework 4 solutions page 3
+
+2.1.2 
+I only write the properties they lack.  
+Each one has the properties it does not lack.
+a. 
+not finite because 2n grows forever
+b.
+not effective on all inputs: if n is not negative, 
+then eventually m := 1/n is division by zero
+c.
+not definite because i is never assigned a value
+(also not finite if i has any value < 10)
+d.
+not definite: we don't know which to choose
+
+2.1.4
+function power(x: real; n: integer) : integer;
+num := 1;
+if n < 0 then m := -n
+else m:= n;
+for j := 1 to m do
+	num := x * num;
+if n < 0 then return(1/num)
+else return(num);
+
+2.1.12
+function last_small_place(A : list) : integer;
+place := 1;
+small := A[1];
+for j := 2 to length(A) do
+	if A[j] <= small then 
+		begin
+		small := A[j];
+		place := j;
+		end;
+return(place);
+
+
+
+

@@ -1,0 +1,59 @@
+COT 3100 Homework 3 solutions
+
+Because this is a text file, we write (-x) for the complement of x.
+
+
+9.1.2
+a. 0 
+b. 0 
+c. 0 or 1 
+d. none
+
+9.1.16
+a. x
+b. -x
+c. 0
+d. 1
+
+9.1.20
+a. xy
+b. (-x)+(-y)
+c. (x + y + z)((-x) + (-y) + (-z))
+d. (x + (-z))(x + 1)((-x) + 1)
+
+9.2.2
+a. (-x)y + (-x)(-y) + xy
+b. x(-y)
+c. xy + x(-y) + (-x)(-y) + (-x)(-y)
+d. x(-y) + (-x)(-y)
+
+9.2.4
+a. (-x)yz + (-x)(-y)z + (-x)y(-z) + (-x)(-y)(-z)
+b. (-x)yz + (-x)(-y)z + (-x)y(-z) + (-x)(-y)(-z) + x(-y)z + x(-y)(-z)
+c. (-x)(-y)z + (-x)(-y)(-z)
+d. xy(-z) + x(-y)z + x(-y)(-z) + (-x)y(-z) + (-x)(-y)z + (-x)(-y)(-z) + (-x)yz
+	
+9.2.6 Just make sure you get every minterm (possibility) 
+that has at most two variables complemented:
+
+(zero complemented) 
+x1x2x3x4x5 + 
+(one complemented) 
++ (-x1)x2x3x4x5 + x1(-x2)x3x4x5 + x1x2(-x3)x4x5 + 
++ x1x2x3(-x)4x5 + + x1x2x3x4(-x5) + 
+(two complemented)
++ (-x1)(-x2)x3x4x5 + (-x1)x2(-x3)x4x5 + (-x1)x2x3)(-x4)x5 +  (-x1)x2x3x4(-x5) +  
++ x1(-x2)(-x3)x4x5 + x1(-x2)x3(-x4)x5 + x1(-x2)x3x4(-x5) + 
++ x1x2(-x3)(-x4)x5 + x1x2(-x3)x4(-x5) + 
++ x1x2x3(-x4)(-x5) 
+
+total number of terms:1 + 5 + 10 = 16
+
+9.2.12 These look pretty ugly written like this. I put some extra spaces 
+in to make it a little easier to see what goes together. And I left off the
+outside pair of parentheses.
+a. -( (-x) (-y) (-z) )
+b. -( (-x) (-(-y)(-x)) (-(-y)z)) )
+c. (-x)y
+d. -( [-((-x)(-y))] [-((-x)(-z))] )
+

@@ -1,0 +1,87 @@
+ FIRST COT 3100 PROGRAMMING ASSIGNMENT 
+ Easier version of Project #3, p.627. 
+ Just do n=1,2,3,4, or 5.
+ 
+We define the standard form of the table for a boolean
+function of degree n to be one with 2-to-the-nth-power rows, the first 
+2-to-the-(n-1)th-power rows
+of which assign the value 1 to x1 and the next 2-to-the-(n-1)th-power rows of
+which assign the value 0 to x1, and, in general, the assignments
+to xj where 1<=j<=n come in alternating blocks of 1s and 
+0s of size
+2-to-the-(n-j)th-power, starting with value 1.  
+(so for n=3, the first 3 columns look like 
+
+1 1 1
+1 1 0
+1 0 1
+1 0 0
+0 1 1
+0 1 0
+0 0 1
+0 0 0
+
+Of course, the last column is different for every different function: 
+if you always use tables in standard form, you
+can write the table for a boolean function of degree n when you are given only
+the sequence of 0s and 1s of length 2-to-the-nth-power that represents the
+output column for the function.  Once you know the function (that is,
+have a table for it), it's not hard to compute a disjunctive normal
+form (a.k.a. sum-of-products expansion) for the function. Write a program in
+Java, C, C++ or Pascal that does the following:
+
+asks the user to input a list of 0s and
+1s of length either 2, 4, 8, 16, or 32, 
+and then outputs a disjunctive normal form for the function.
+
+
+
+If the list contains other things besides 0s and 1s, or if its
+length is something that is not a power of 2, or bigger than 32, then 
+output the error message ``This is not a very nice function"
+instead of the disjunctive normal form.
+Use -x for not-x (boolean complement) and just write things next to each other 
+for boolean product. Use x1, x2, x3, x4 , and x5 for the variables. (You wont 
+need more than 5, since 32 is 2 to the 5th power.)
+
+
+You will have to be able to use loops with counters and arrays --- things 
+you should have learned in your programming course. Of course, you will have to
+have some way to emulate a dumb old terminal interface in order to test
+your program.  
+
+ 
+ 
+COMMENTS and HINTS:
+
+ The user inputs up to 32 0s and 1s, which get recorded in an array by the 
+program.  While this is happening, the program keeps track of how many 
+with a counter.  
+Then, the program calcultes whether the number of 0s and 1s is a power of 
+2 --- probably by dividing the counter some number of times by two and 
+making sure there is never a remainder.  While doing this, keep another 
+counter to see what power of two the number of inputs was.  
+Now you have the array of 0s and 1s and a number that tells what power 
+of two the length of the array is.  This number is the number of variables 
+you will need in your disjunctive normal form.  Now you get another two-
+dimensional array to be the table for the function this array's size is the 
+number of variables + 1 (the first dimension giving the columns) times 
+the length of the other array of 0s and 1s (the second dimension giving 
+the rows). You have to figure out how to put in the right number of 0s and 
+1s in the first several columns of the table.  Enter half 1s, then half 0s for 
+the first column, enter four alternating sets of 1s and 0s for the second 
+column, and so on, just like the standard-form function tables we did in 
+class. I suggest using some kind of boolean flag to keep track of whether 
+you should be entering 0s or 1s, switching the flag on or off based on how 
+many (2 to some power given by the column number) 0s or 1s are 
+supposed to be in a block. The array of inputs is the last column.  Now 
+you have a table with the function.  To get the disjunctive normal form, 
+you have to check the last column to look for 1s. Wherever there is a 1, 
+you look at the other values in that row.  If there's a 1 in place i, then xi 
+(the ith boolean variable) is in the minterm; if there's a 0 in place i, then -
+xi is in the minterm.  Add up all the minterms you get this way and you 
+get the disjunctive normal form.   
+
+
+
+

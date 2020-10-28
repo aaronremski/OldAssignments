@@ -1,0 +1,167 @@
+COT 3100 Homework 2 solutions
+
+1.1.8 use & for and, - for not, and v for or
+
+a. r & -q
+b. p & q & r
+c. r -> p
+d. p & -q & r
+e. (p & q) -> r
+f. r <-> (q v p)
+
+1.1.24
+a. 
+p	q	r	(pvq)vr
+____________________
+t	t	t		t
+t	t	f		t
+t	f	t		t
+t	f	t		t
+f	t	t		t
+f	t	f		t
+f	f	t		t
+f	f	f		f
+
+b.
+p	q	r	(pvq)&r
+____________________
+t	t	t		t
+t	t	f		f
+t	f	t		t
+t	f	f		f
+f	t	t		t
+f	t	f		f
+f	f	t		f
+f	f	f		f
+
+c. 
+p	q	r	(p&q)vr
+____________________
+t	t	t		t
+t	t	f		t
+t	f	t		t
+t	f	f		f
+f	t	t		t
+f	t	f		f
+f	f	t		f
+f	f	f		f
+
+d. 
+p	q	r	(p&q)&r
+____________________
+t	t	t		t
+t	t	f		f
+t	f	t		f
+t	f	f		f
+f	t	t		f
+f	t	f		f
+f	f	t		f
+f	f	f		f
+
+e. 
+p	q	r	(pvq)&-r
+____________________
+t	t	t		f
+t	t	f		t
+t	f	t		f
+t	f	f		t
+f	t	t		f
+f	t	f		t
+f	f	t		f
+f	f	f		f
+
+f. 
+p	q	r	(p&q)v-r
+____________________
+t	t	t		t
+t	t	f		t
+t	f	t		f
+t	f	f		t
+f	t	t		f
+f	t	f		t
+f	f	t		f
+f	f	f		t
+
+1.2.2
+p	-p	-(-p)
+_____________
+t	 f	  t
+f	 t	  f
+
+1.2.6
+p	q	(p&q)	-(p&q)	-pv-q
+_____________________________
+t	t	  t		f		f
+t	f	  f		t		t
+f	t	  f		t		t
+f	f	  f		t		t
+
+1.2.14
+
+p	q	(p&q)	(-p&-q)	(p&q)v(-p&-q)  p<->q
+_____________________________________________
+t	t	  t		   f			t			t
+t	f	  f		   f			f			f
+f	t	  f		   f			f			f
+f	f	  f		   t			t			t
+
+1.2.16
+
+Just observe that the bad line in the table will be where 
+-q is true and -p is false, which is the same as 
+q is false and p is true.	 The table is below. 
+
+p	q	p->q	-q -> -p
+________________________
+t	t	  t		   t	  
+t	f	  f		   f 	  
+f	t	  t		   t	  
+f	f	  t		   t
+
+1.6.14
+I'll do the first one in full detail, and abbreviate the other three.
+
+a. -3x+4=-3y+4 implies
+	-3x=-3y implies
+	3x=3y implies
+	x=y
+So the function is 1-1.
+-3x+4=z has the solution
+x=(z-4)/-3, which is always a real number;
+so the function is onto. So it is a bijection.
+
+b. Since 2 and -2 go to the same place, this function is not 1-1, so 
+it can't be a bijection.  
+(It is also not onto, since the value of the 
+output is always less than 7, a sort-of obvious fact that 
+you can actually prove using the mean value theorem that you 
+should learn about in calculus class.)
+
+c. This expression is undefined at -2, so it is not even a function, much 
+less a bijection.
+
+d. This is a bijection.  You should already know that fifth powers can 
+take on negative values, so we can hit everything in R as an output.
+Also, fifth roots are unique, so the function is also 1-1, since adding one 
+is always a 1-1 operation.
+
+1.6.56
+Here's how you do it.
+The inverse function (-1 power) goes backwards from outputs to inputs.
+(f o g)(x)=f(g(x)), so
+f o g is the function that first does g then does f, so f is the LAST 
+operation that gets applied and g is the FIRST one.
+This means that (f o g)-inverse is the function that first 
+goes backwards using f (since that is what we used last), then goes 
+backwards using g (since that is where we got started with inputs).
+Going backwards using f is f-inverse. Going backwards using g is g-inverse.
+So going backwards all the way from the final output to the original 
+input is also (g-inverse o f-inverse).
+So these are the same function: 
+(f o g)-inverse = (g-inverse o f-inverse).
+
+
+	
+
+
+

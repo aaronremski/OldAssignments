@@ -1,0 +1,126 @@
+COT 3100 Homework 5 solutions
+
+2.1.8
+Notice that n, the length of a,is 8.
+I use exactly the book's algorithms here.
+
+Linear search 
+i := 1
+1 <= 8 and 7 <> 1 (beginning of loop)
+i := i +1 := 2
+2 <= 8 and 7 <> 3
+i := i +1 := 2
+3 <= 8 and 7 <> 4 
+i := i +1 := 2
+4 <= 8 and 7 <> 5 
+i := i +1 := 2
+5 <= 8 and 7 <> 6 
+i := i +1 := 2
+6 <= 8 and 7 <> 8 
+i := i +1 := 2
+7 <= 8 and 7 <> 9 
+i := i +1 := 2
+8 <= 8 and 7 <> 11 
+i := i +1 := 2
+9 > 8  (exit loop)
+9 > 8  (line after loop)
+location := 0
+total steps: 20
+
+Binary search
+i := 1
+j := 8
+1 < 8  (beginning of loop)
+m := floor((1+8)/2) := 4
+7 > a[4] = 5
+i := 4 +1 = 5
+5 < 8
+m := floor((5+8)/2) := 6
+7 <= a[6] = 8
+j := 6
+5 < 6 
+m := floor((5+6)/2) := 5
+7 > a[5] = 6
+i := 5 +1 = 6
+6 <= 6 (exit loop)
+7 <> a[6] = 8
+location := 0
+total steps: 17
+
+2.1.18
+I wrote this like a Pascal function.  The algorithm 
+is just to count how many times each value in B is hit.
+If any are hit more than once, the function is not injective.
+I wrote the sets as array: since they are finite, we can always just 
+list all the elements in this way.
+
+function injective(A[1..n], B[1..m] : set_array; f : function) : boolean;
+var 
+count : set_array;
+bad : boolean;
+
+bad := false;
+for i := 1 to m do
+	count[i] : = 0;
+for every j = 1 to n do
+	for every i := 1 to n do
+		if f(A[j]) = B[i] then 
+				count[i] := count[i] + 1;
+for i := 1 to m do
+	if count[i] > 1 then
+		bad := true;
+injective := not bad;
+	
+	
+2.2.4
+x is x to the 1 and 1 is 2 to the 0
+so we start with 0 and square the number k times, 
+adding 1 to the power of 2 in the exponent each time.
+multiplying x by itself takes 
+2 to the k minus 1 multiplications
+(since we go from x squared up to x to the 2 to the k 
+with the multiplications)
+The squaring way is far more efficient, since k is much 
+slower growing than 2 to the k minus 1
+
+2.2.10
+a. 0.000001224 seconds
+b. 0.00104937 seconds
+c. about 13 days
+d. about 40 trillion years
+
+1.8.2
+a. yes
+k = 1, C = 17 + 11 = 28 will work.
+b. yes
+k = 1, C = 1 + 1000 = 1001 will work.
+c. yes
+k = 1, C = 1 will work, since log x < x.
+d. no
+Calculation shows that (1/2) times x-squared would have to always be
+smaller than the number C when x > k.   But then just take 
+x = 2|C| + |k| + 1. then x > k, and x-squared  > (2|C| + 1)-squared > 2C.
+This means (1/2) times x-squared is bigger than C.  A contradiction.
+e. no
+As I said in class this function grows faster than any power of x. 
+f. yes
+Since the function is always less than x(x+1), the fact that k = 1 and 
+C = 2 works for x(x+1) means they will work for the function.
+
+1.8.8
+Just divide f by the nth power of x and look for the first number n that 
+will work.  Remember log x < x, but log x is a growing function.
+a. 4
+b. 5
+c. 0
+d. -1
+
+ 
+
+
+
+
+
+
+
+

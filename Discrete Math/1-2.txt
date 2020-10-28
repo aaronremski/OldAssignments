@@ -1,0 +1,70 @@
+Aaron Remski
+
+
+2.1  #2,4,12
+
+2. Characteristics: input, output, definiteness, correctness,
+		    finiteness, effectiveness, generality
+
+a.
+	input		yes
+        output		no
+        definiteness   	no
+ 	correctness	no
+	finiteness	no
+ 	effectiveness	no
+	generality	yes
+
+This procedure never exists the loop. n is a positve number, therefore the condition n > 0 is always true. This is an "infinite loop". The program never finishes.
+
+b. 	input		yes
+	ouput		not necessarily (if n = 0, undefined)
+        definiteness   	yes
+ 	correctness	no
+	finiteness	yes
+ 	effectiveness	no
+	generality	no (where n != 0)
+
+This procedure subtracts 1 from the input n until n becomes a negative number because of the n >= 0 condition. Every loop produces another variable m with 1 / n.
+
+c. 	input		yes
+	ouput		not necessarily (if i > 10)
+        definiteness   	yes
+ 	correctness	yes
+	finiteness	yes
+ 	effectiveness	yes
+	generality	no (i < 10)
+
+d. 	input		yes
+	ouput		yes
+        definiteness   	yes
+ 	correctness	yes
+	finiteness	yes
+ 	effectiveness	yes
+	generality	no (x = a or b)
+
+4. Getvalues x, n;
+	
+   sum = x
+
+    for (i = 0; i < n; i++)
+	sum = sum * x
+   
+    if (x < 0)
+	sum = 1 / sum
+
+
+12.	i = 0
+	smallint = array[i] 
+	for (i = 1; i < (length of array(list)); i++)
+	    if smallint	< array[i++]
+		smallint = array[i]
+
+
+	
+	
+
+	
+  	
+   
+ 	  

@@ -1,0 +1,184 @@
+SECOND COT3100 PROGRAMMING ASSIGNMENT
+"The induction iterator" 
+
+Write a program for using the 
+inductive proof that
+
+ for every n, 0+2+4+6+...+2n=(n)(n+1)
+ 
+ to give a long iterative proof 
+for any n.  
+
+Remember what the proof algorithm for a "for every n" statement is 
+on which induction is based:
+
+Proof_Of_S(n)
+1. write proof of S(0)
+2. for m = 1 to n
+3.     write a proof of S(m) that uses the truth of S(m-1).
+
+Since we'll always have done S(m-1) already with the loop by the time we 
+get to S(m), this will prove S(n) by doing every case up to n.
+A proof by induction just involves writing the actual code for lines 1 
+(the basis case) and 
+3 (the inductive step), since line 2 is part of every programming language.
+
+So your program will prove that the first n even 
+numbers (starting with 0) add up to be (n)(n+1) by writing to a 
+file as follows: first do the arithmetic for n=0 and write it out into 
+a file ``evenproof.txt''.  For instance, in the basis case 
+your program might have output like the following lines: 
+
+
+sum with j from 0 to 0 of 2j  = 
+2(0) = 0 = 0(1) = 0(0+1)  
+So, 
+sum with j from 0 to 0 of 2j = 0(0+1). 
+What we wanted. 
+
+
+
+
+
+Of course, this is just the first part.  
+Then use the inductive part and a  FOR loop to write proofs for each number from 
+1,2,... n, using the equations you get for m to get the 
+next ones for m+1.  Thinking 
+through how to organize the math into write statements that produce 
+something that makes sense will be the only hard part. The main point of 
+this assignment is 
+hopefully to get you to understand what induction means. 
+
+To repeat: this should be an easier programming assignment than the 
+first one because
+it just uses your 
+abiltiy to write a FOR loop and write to a file.   You should be 
+able to get this done on time. 
+
+
+COMMENTS and HINTS
+
+Here the idea is to write an iterative program that prints a proof for 
+every n that 0+2+4+6+...+2n=(n)(n+1) in some way that uses the inductive 
+proof (assigned as homework!) that this is true. So the user inputs a number n. Then 
+for every number j=0,1,...n, the machine writes down the steps of a calculation into a 
+file. for j=0, use the calculation in the basis case of the inductive proof. For j0, you 
+will have the last line of the j-1 step saying that 
+0+2+...+2j=(j)(j+1). 
+This is always what you get from the inductive hypothesis in the induction proof. The 
+inductive step of that proof should be a calculation using 
+0+2+...+2j=(j)(j+1) 
+to get 
+0+2+...+2j+ 2(j+1)=(j+1)(j+2).
+So you should be able to put this calculation into a FOR loop in order to 
+continually repeat writing down the calculation into a file. Please ask me in class or 
+come to my office if you need help. DO NOT wait until the last minute to do this --- it 
+will be 
+too close to the end of the semester for me to let you turn this in late. 
+Because this assignment may be a little confusing,
+I will explain more about what I want and how to do it, by giving an 
+example that does the same thing for a (slightly) harder induction 
+argument.
+
+Suppose I was asking for the same kind of thing except what I wanted was for you to do it 
+for the statement P(n) where P(n) is 
+0 cubed + 1 cubed + 2 cubed + ... + n cubed = ((n)(n+1)/2) squared. (The inductive proof 
+is a homework assignment.) 
+The inductive step in that proof was to prove that
+
+sum of j from 0 to (m+1) of j cubed = ((m+1)((m+1)+1)/2) squared, by using 
+sum with j from 0 to (m) of j cubed = ((m)(m+1)/2) squared.
+
+This involved a bunch of steps like 
+
+sum with j from 0 to (m+1) of j cubed =
+sum with j from 0 to (m) of j cubed + ((m+1) cubed) =
+(((m)(m+1)/2) squared) + ((m+1) cubed) =
+((m+1) squared) ((m squared)/4 + 4(m+1)/4) =
+((m+1) squared)((m squared + 4(m) + 4)/4) =
+((m+1) squared)((m+2) squared)/(2 squared) =
+((m+1) squared)((m+1+1) squared)/(2 squared) = by associating m+1
+((m+1) squared)(((m+1)+1) squared)/(2 squared) =
+((m+1)((m+1)+1)/2) squared. 
+So, 
+sum with j from 0 to (m+1) of j cubed = ((m+1)((m+1)+1)/2) squared. 
+(What we wanted.) 
+
+So the following is what the output of a similar programming assignment should 
+look like when n=4. 
+
+Basis Case 0 
+sum with j from 0 to 0 of j cubed = 
+0 cubed = 0 squared = (0(1)/2) squared = (0(0+1)/2) squared. 
+So, 
+sum with j from 0 to 0 of j cubed = (0(0+1)/2) squared. 
+What we wanted. 
+
+Inductive Cases (Successors):
+
+Case m+1 = 1 
+sum with j from 0 to 1 of j cubed =
+sum with j from 0 to 0 of j cubed + ((0+1) cubed) = 
+(By Case 0)
+(((0)(0+1)/2) squared) + ((0+1) cubed) = 
+((0+1) squared) ((0 squared)/4 + 4(0+1)/4) =
+((0+1) squared)((0 squared + 4(0) + 4)/4) =
+((0+1) squared)((0+2) squared)/(2 squared) =
+((0+1) squared)((0+1+1) squared)/(2 squared) = by simplifying 0+1
+((1) squared)((1+1) squared)/(2 squared) =
+((1)(1+1)/2) squared. 
+So, 
+sum with j from 0 to 1 of j cubed = (1(1+1)/2) squared. 
+(What we wanted.) 
+
+Case m+1 = 2 
+sum with j from 0 to 2 of j cubed =
+sum with j from 0 to 1 of j cubed + ((1+1) cubed) =
+(By Case 1)
+(((1)(1+1)/2) squared) + ((1+1) cubed) = 
+((1+1) squared) ((1 squared)/4 + 4(1+1)/4) =
+((1+1) squared)((1 squared + 4(1) + 4)/4) =
+((1+1) squared)((1+2) squared)/(2 squared) =
+((1+1) squared)((1+1+1) squared)/(2 squared) = by simplifying 1+1
+((2) squared)((2+1) squared)/(2 squared) =
+((2)(2+1)/2) squared. 
+So, 
+sum with j from 0 to 2 of j cubed = (2(2+1)/2) squared. 
+(What we wanted.) 
+
+Case m+1 = 3 
+sum with j from 0 to 3 of j cubed =
+sum with j from 0 to 2 of j cubed + ((2+1) cubed) =
+(By Case 2)
+(((2)(2+1)/3) squared) + ((2+1) cubed) = 
+((2+1) squared) ((2 squared)/4 + 4(2+1)/4) =
+((2+1) squared)((2 squared + 4(2) + 4)/4) =
+((2+1) squared)((2+2) squared)/(2 squared) =
+((2+1) squared)((2+1+1) squared)/(2 squared) = by simplifying 2+1
+((3) squared)((3+1) squared)/(2 squared) = 
+((3)(3+1)/2) squared. 
+So, 
+sum with j from 0 to 3 of j cubed = (3(3+1)/2) squared. 
+(What we wanted.) 
+
+Case m+1 = 4 
+sum with j from 0 to 4 of j cubed =
+sum with j from 0 to 3 of j cubed + ((3+1) cubed) =
+(By Case 3)
+(((3)(3+1)/4) squared) + ((3+1) cubed) = 
+((3+1) squared) ((3 squared)/4 + 4(3+1)/4) =
+((3+1) squared)((3 squared + 4(3) + 4)/4) =
+((3+1) squared)((3+2) squared)/(2 squared) =
+((3+1) squared)((3+1+1) squared)/(2 squared) = by simplifying 3+1 
+((4) squared)((4+1) squared)/(2 squared) =
+((4)(4+1)/2) squared. 
+So, 
+sum with j from 0 to 4 of j cubed = (4(4+1)/2) squared. 
+(What we wanted.)
+
+
+The point is that once you write out the general case with a variable m, 
+the machine can do it using a FOR loop to just keep checking it using whatever 
+the previous case was over and over again --- assuming you actually got started 
+legally with 0. 
+
