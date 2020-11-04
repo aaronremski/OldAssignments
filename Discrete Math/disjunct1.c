@@ -1,5 +1,5 @@
 /*Author:     Aaron Remski aka. OzHandicraft
- *SSN:        060-58-8323 
+ *SSN:        ****
  *Course:     COT 3100
  *Assignment: disjunct.c
  *Description:This program will accept up to 32 1s & 0s and print out the
