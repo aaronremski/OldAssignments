@@ -1,6 +1,14 @@
 /*Author:     Aaron Remski aka. OzHandicraft
+<<<<<<< HEAD
  *SSN:        ****
  *Course:
+||||||| 83b059a
+ *SSN:        060-58-8323 
+ *Course:     
+=======
+ *SSN:        ****
+ *Course:     
+>>>>>>> 763c4de09d905966dcc83e7e4be3c6652e644c78
  *Assignment: test
  *Description:
  *
