@@ -1,5 +1,5 @@
 /*Author:     Aaron Remski aka. OzHandicraft
- *SSN:        060-58-8323 
+ *SSN:        ****
  *Course:     COT 3100
  *Assignment: disjunct.c
  *Description:This program will accept up to 32 1s & 0s and print out the
@@ -16,14 +16,14 @@
 
 
 
-int powerchk (int linecount); 
+int powerchk (int linecount);
 void createtable (int linecount, int vars, int inputarray[MAXROW]);
 
 /*int writefunction (int *inputarray[MAXROW],int *linecount);*/
 
 int main(void)
   {
-   
+
     int variables, linecount;
     int input, index, counter;        /*variable declaration*/
     int inputarray[MAXROW];
@@ -46,9 +46,9 @@ int main(void)
          linecount++;
            }
        } /*end while*/
-       
+
        printf("linecount equals %d  after input", linecount);
-       variables = powerchk(linecount); 
+       variables = powerchk(linecount);
        printf("variables equal %d after powerchk", variables);
 
         if (variables != 0)
@@ -96,10 +96,10 @@ void createtable (int linecount, int vars, int inputarray[MAXROW])
    int i, row, column;
 
    row = 0;
-  
+
    varcount = linecount;
-   
- for (column = 0; column < vars; column++) 
+
+ for (column = 0; column < vars; column++)
    {
      varcount /= 2;
 
@@ -107,15 +107,15 @@ void createtable (int linecount, int vars, int inputarray[MAXROW])
        {
          for (i = 0; i < varcount; i++)
 		{
-		tablearray[row][column] = 1;        
+		tablearray[row][column] = 1;
 		row++;
-	      
+
 		} /*end for*/
          for (i = 0; i < varcount; i++)
 	        {
-	        tablearray[row][column] = 0;	
+	        tablearray[row][column] = 0;
 	        row++;
-	        }  
+	        }
        } /*end while*/
 
        row = 0;
@@ -131,7 +131,7 @@ void createtable (int linecount, int vars, int inputarray[MAXROW])
        printf("%d", inputarray [row]);
       column = 0;
       printf("\n");
-  
+
     } /*end for*/
 } /*end function*/
 

@@ -1,5 +1,5 @@
 /*Author:     Aaron Remski aka. OzHandicraft
- *SSN:        060-58-8323 
+ *SSN:        ****
  *Course:     COT 3100
  *Assignment: disjunct.c
  *Description:This program will accept up to 32 1s & 0s and print out the
@@ -16,20 +16,20 @@
 #define SENTINEL 2
 
 void getvalues(int *pinputarray[MAXROW], int *plinecount);
-int powerchk (int linecount); 
+int powerchk (int linecount);
 void createtable (int linecount, int vars, int inputarray[MAXROW]);
 
 /*int writefunction (int *inputarray[MAXROW],int *linecount);*/
 
 int main(void)
   {
-   
+
     int variables, linecount;
-    int inputarray[MAXROW];  
+    int inputarray[MAXROW];
 
     getvalues(&inputarray, &linecount);
-	
-    variables = powerchk(linecount); 
+
+    variables = powerchk(linecount);
 
     createtable(linecount, variables, inputarray);
 
@@ -49,7 +49,7 @@ int main(void)
 
       index = 0;
       counter = 0;
-  
+
       while (TRUE)
        {
          printf("\nEnter 1 or 0 (2 to terminate inputs): ");
@@ -59,8 +59,8 @@ int main(void)
          ++index;
          ++*plinecount;
        } /*end while*/
-    
-    } /*end function*/  
+
+    } /*end function*/
 
 /*-------------Powerchk----------------------*/
 int powerchk (int linecount)
@@ -97,10 +97,10 @@ void createtable (int linecount, int vars, int inputarray[MAXROW])
    int i, row, column;
 
    row = 0;
-  
+
    varcount = linecount;
-   
- for (column = 0; column < vars; column++) 
+
+ for (column = 0; column < vars; column++)
    {
      varcount /= 2;
 
@@ -108,15 +108,15 @@ void createtable (int linecount, int vars, int inputarray[MAXROW])
        {
          for (i = 0; i < varcount; i++)
 		{
-		tablearray[row][column] = 1;        
+		tablearray[row][column] = 1;
 		row++;
-	      
+
 		} /*end for*/
          for (i = 0; i < varcount; i++)
 	        {
-	        tablearray[row][column] = 0;	
+	        tablearray[row][column] = 0;
 	        row++;
-	        }  
+	        }
        } /*end while*/
 
        row = 0;
@@ -132,6 +132,6 @@ void createtable (int linecount, int vars, int inputarray[MAXROW])
        printf("%d", inputarray [row]);
       column = 0;
       printf("\n");
-  
+
     } /*end for*/
 } /*end function*/

@@ -1,22 +1,22 @@
 /*Author:     Aaron Remski aka. OzHandicraft
- *SSN:        060-58-8323 
- *Course:     cis3020 Intro to CIS Fall 1999         
- *Assignment: 
+ *SSN:        ***
+ *Course:     cis3020 Intro to CIS Fall 1999
+ *Assignment:
  *Description:
- *            
+ *
  */
 
 
 #include <stdio.h>
 #include "genlib.h"
 #include "simpio.h"
-                                                           
+
 int main(void)
 
 {
 	int linecount, variables;
 
-      
+
    printf("\nEnter linecount: ")
    linecount = GetInteger();
    printf("\n");
@@ -41,7 +41,7 @@ int main(void)
 		}
   	   varcount = varcount * varcount
 	   row = 0;
-    
+
 	return(0);
 }
 

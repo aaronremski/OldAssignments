@@ -1,5 +1,5 @@
 /*Author:     Aaron Remski aka. OzHandicraft
- *SSN:        060-58-8323 
+ *SSN:        ***
  *Course:     cis3020 Intro to CIS Fall 1999         
  *Assignment: hw3, prodsum.c
  *Description:Returns the product and sum of the
